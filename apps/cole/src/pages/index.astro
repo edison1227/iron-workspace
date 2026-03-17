@@ -1,0 +1,97 @@
+---
+// 這裡區塊是 Astro 的 Server-side 執行區
+const pageTitle = "COLE | Precision In Circle - 高性能自行車輪組";
+const pageDescription = "COLE 提供無與倫比的速度與耐用性。探索我們專為極致性能打造的高階碳纖維輪組系列。";
+import IndustrialButton from '@iron/ui/IndustrialButton.astro';
+---
+
+<html lang="zh-TW" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <meta name="keywords" content="COLE, 自行車輪組, 碳纖維輪組, 公路車, 賽車, Precision In Circle" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="COLE | Engineered for Unmatched Speed" />
+    <meta property="og:type" content="website" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,800;0,900;1,800&display=swap" rel="stylesheet" />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "COLE",
+      "url": "https://www.cole-wheels.com",
+      "description": "Engineered for unmatched speed and durability."
+    })} />
+  </head>
+  <body class="font-sans antialiased text-white bg-black overflow-x-hidden">
+
+    <section class="relative w-full h-screen min-h-[600px] flex flex-col overflow-hidden">
+        
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center bg-no-repeat animate-zoom-in"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80"></div>
+        </div>
+
+        <header class="relative z-20 w-full px-6 py-8 md:px-12 flex items-center justify-between">
+            <div class="flex-shrink-0 cursor-pointer">
+                <h1 class="text-4xl font-black italic tracking-wider text-white select-none">COLE</h1>
+            </div>
+
+            <nav class="hidden lg:flex items-center gap-10 px-10 py-3.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10 shadow-lg">
+                <a href="#" class="text-xs font-semibold tracking-[0.25em] uppercase hover:text-cyan-400 transition-colors duration-300 text-white">Products</a>
+                <a href="#" class="text-xs font-semibold tracking-[0.25em] uppercase hover:text-cyan-400 transition-colors duration-300 text-white">Technology</a>
+                <a href="#" class="text-xs font-semibold tracking-[0.25em] uppercase hover:text-cyan-400 transition-colors duration-300 text-white">Riders</a>
+                <a href="#" class="text-xs font-semibold tracking-[0.25em] uppercase hover:text-cyan-400 transition-colors duration-300 text-white">About</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="#" class="hidden sm:inline-block px-8 py-3.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-xs font-semibold tracking-[0.25em] uppercase hover:bg-white/20 transition-all duration-300 shadow-lg text-white">
+                    Shop
+                </a>
+                
+                <button class="lg:hidden p-2 text-white/80 hover:text-white" aria-label="Open Menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <main class="relative z-30 flex-grow flex flex-col items-center justify-center px-4 text-center">
+            <h2 class="text-white text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-extrabold tracking-tight mb-4 drop-shadow-2xl">
+                PRECISION IN CIRCLE.
+            </h2>
+            
+            <p class="text-gray-200 text-xs sm:text-sm md:text-base font-medium tracking-[0.25em] mb-12 max-w-2xl drop-shadow-md">
+                ENGINEERED FOR UNMATCHED SPEED AND DURABILITY.
+            </p>
+            
+            <a href="#" class="group relative px-8 py-4 rounded-full bg-black/30 backdrop-blur-sm border border-cyan-500/50 shadow-neon-cyan hover:shadow-neon-cyan-hover transition-all duration-500 overflow-hidden flex items-center justify-center">
+                <div class="absolute inset-0 bg-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <span class="relative text-xs sm:text-sm font-bold tracking-[0.2em] text-white z-10">
+                    [ EXPLORE THE RIMS COLLECTION ]
+                </span>
+            </a>
+        </main>
+
+        <div class="relative z-30 pb-10 flex justify-center w-full">
+            <a href="#next-section" class="flex flex-col items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300" aria-label="Scroll Down">
+                <div class="w-6 h-10 border border-white/50 rounded-full flex justify-center pt-2 backdrop-blur-sm bg-white/5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3 h-3 text-cyan-400 animate-bounce-slow">
+                        <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+
+    </section>
+
+  </body>
+</html>
