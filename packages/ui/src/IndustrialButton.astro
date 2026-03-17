@@ -1,0 +1,9 @@
+---
+// 接收外部傳入的屬性 (Props)，讓按鈕可以動態改變文字和連結
+const { href = "#", text = "ENTER" } = Astro.props;
+---
+
+<a href={href} class="relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-bold text-white bg-zinc-900 border border-zinc-700 hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300 group">
+  <span class="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-zinc-800"></span>
+  <span class="relative tracking-[0.25em] text-xs uppercase z-10">{text}</span>
+</a>
